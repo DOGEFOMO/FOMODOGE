@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOMO DOGE Run</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #ff6600;
+        }
+
+        .doge {
+            width: 100px;
+            position: relative;
+            animation: dogeJump 1s infinite ease-in-out;
+        }
+
+        .moon {
+            font-size: 50px;
+            margin: 30px 0;
+        }
+
+        @keyframes dogeJump {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-30px); }
+            100% { transform: translateY(0); }
+        }
+
+        .button {
+            background-color: #ff6600;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #cc5200;
+        }
+
+        .counter {
+            font-size: 24px;
+            color: #333;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>FOMO DOGE бежит за Луной!</h1>
+    <div class="moon">🌕</div>
+    <img src="https://i.imgur.com/WOQHnR8.png" alt="DOGE" class="doge" id="doge">
+    
+    <button class="button" onclick="jumpToMoon()">Подтолкнуть DOGE</button>
+    
+    <div class="counter">DOGE прыгнул 0 раз</div>
+
+    <script>
+        let jumps = 0;
+        
+        function jumpToMoon() {
+            jumps += 1;
+            document.querySelector('.counter').textContent = `DOGE прыгнул ${jumps} раз`;
+            document.getElementById("doge").style.animationPlayState = "running";
+        }
+    </script>
+
+</body>
+</html>
