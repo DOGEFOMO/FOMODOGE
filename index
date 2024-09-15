@@ -28,7 +28,7 @@
         }
 
         @keyframes dogeJump {
-            0% { transform: translateY(0); }
+            0% { transform: translateY(1); }
             50% { transform: translateY(-30px); }
             100% { transform: translateY(0); }
         }
@@ -56,7 +56,7 @@
 </head>
 <body>
 
-    <h1>FOMO DOGE бежит за Луной!</h1>
+    <h1>FOMO DOGE runs to the moon!</h1>
     <div class="moon">🌕</div>
     <img src="https://i.imgur.com/WOQHnR8.png" alt="DOGE" class="doge" id="doge">
     
